@@ -9,7 +9,7 @@ layout: page.njk
 <p class="post-date">
   posted on
   <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("America/Los_Angeles") }}</time>
-  by {{ author or metadata.author }}
+  by {{ metadata.author }}
 </p>
 
 {% set relevantTags = tags | removeBasicTags %}

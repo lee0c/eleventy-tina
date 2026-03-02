@@ -6,7 +6,7 @@
     "author": "author"
   },
   "fonts": {
-    "header": "Montserrat",
+    "header": "Rock Salt",
     "headerFallback": "serif",
     "body": "Roboto Condensed",
     "bodyFallback": "sans-serif"
@@ -14,7 +14,7 @@
   "topNav": [
     {
       "title": "about",
-      "link": "/about"
+      "link": "/about/"
     },
     {
       "title": "contact",
@@ -23,6 +23,20 @@
     {
       "title": "blog",
       "link": "/blog"
+    }
+  ],
+  "bottomNav": [
+    {
+      "title": "attribution",
+      "link": "/attribution/"
+    },
+    {
+      "title": "brought to you in 2026",
+      "link": "/"
+    },
+    {
+      "title": "src",
+      "link": "https://github.com/lee0c/eleventy-tina"
     }
   ]
 }

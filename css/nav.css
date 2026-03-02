@@ -1,0 +1,98 @@
+header {
+	--tab-height: 2rem;
+	--curve-width: 1.2rem;
+}
+
+header ul,
+footer ul {
+	list-style: none;
+	display: flex;
+}
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 1.5rem calc(var(--curve-width) + 3px) 0;
+}
+
+header a {
+	background-color: var(--color-bg);
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height: var(--tab-height);
+	display: block;
+	text-decoration: none;
+	font-family: var(--font-family-header);
+	position: relative;
+}
+
+header a::before,
+header a::after {
+	content: "";
+	width: var(--curve-width);
+	height: calc(var(--tab-height) + 1px);
+	background-color: var(--color-bg);
+	position: absolute;
+	bottom: -1px;
+}
+
+header a::before {
+	border-radius: .5rem 0 0 0;
+	left: calc(.66 * (0px - var(--curve-width)));
+	-webkit-transform: skewX(-10deg);
+	transform: skewX(-10deg);
+}
+
+header a::after {
+	border-radius: 0 .5rem 0 0;
+	right: calc(.66 * (0px - var(--curve-width)));
+	-webkit-transform: skewX(10deg);
+	transform: skewX(10deg);
+}
+
+header a[aria-current="page"] {
+	background-color: var(--color-bg-alt);
+}
+
+/* Skip link */
+#skip {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -99;
+}
+
+#skip:focus-visible {
+	display: inline-block;
+	left: auto;
+	top: auto;
+	width: auto;
+	height: auto;
+	overflow: auto;
+	margin: 0 10%;
+	z-index: 999;
+}
+
+header ul {
+	gap: calc(var(--curve-width) * 2.5);
+}
+
+footer {
+	padding: 1rem;
+}
+
+footer ul {
+	justify-content: center;
+	gap: 1rem;
+}
+
+@media (max-width: 650px) {
+	footer ul {
+		flex-flow: column;
+		gap: 0;
+	}
+}

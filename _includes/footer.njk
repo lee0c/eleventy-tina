@@ -1,7 +1,13 @@
 <footer>
-  <ul>
-    <li>
-      <a href="/">home</a>
-    </li>
-  </ul>
+  {% if metadata.bottomNav.length %}
+  <nav aria-label="footer navigation">
+    <ul>
+      {% for item in metadata.bottomNav %}
+        <li><a href="{{ item.link }}"
+          {% if item.link == page.url %}aria-current="page"{% endif %}>
+          {{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
 </footer>

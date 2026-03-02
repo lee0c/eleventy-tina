@@ -6,6 +6,6 @@ export default {
 	url: config.metadata.url,
 	author: config.metadata.author,
 	topNav: config.topNav,
-	color: config.color,
+	bottomNav: config.bottomNav,
 	fonts: config.fonts
 }

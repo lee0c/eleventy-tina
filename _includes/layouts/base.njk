@@ -8,6 +8,11 @@
 		<title>{{ pageTitle }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
+    <meta property="og:title" content="{{ title or metadata.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <meta property="og:site_name" content="{{ metadata.title }}" />
+
     <!-- Style -->
     <style>
       :root {
@@ -20,6 +25,7 @@
       }
     </style>
     <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/nav.css" rel="stylesheet" />
 
     <!-- Fonts -->
     {% if metadata.fonts.header or metadata.fonts.body %}
@@ -31,7 +37,7 @@
 	<body>
     {% include "header.njk" %}
 
-		<main>
+		<main id="main">
       <h1>{{ title }}</h1>
 
       {{ content | safe }}

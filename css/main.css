@@ -1,22 +1,21 @@
 :root {
 	color-scheme: light dark;
 
-	--color: #0000ff;
+	--color-dark: #17201f;
+	--color-light: #69966e;
 
-	--color-dark: hsl(from var(--color) h 50 7);
-	--color-light: hsl(from var(--color) h 50 93);
+	--color-dark-alt: #1d302e;
+	--color-light-alt: #a6c9a8;
 
-	--color-dark-alt: hsl(from var(--color) h 50 10);
-	--color-light-alt: hsl(from var(--color) h 50 90);
+	--color-dark-text: #eadfc6;
+	--color-light-text: #212226;
 
-	--color-accent-dark: hsl(from var(--color) h 85 20);
-	--color-accent-light: hsl(from var(--color) h 85 80);
-
-	--color-text: light-dark(var(--color-dark), var(--color-light));
+	--color-text: light-dark(var(--color-light-text), var(--color-dark-text));
 	--color-text-alt: light-dark(var(--color-dark-alt), var(--color-light-alt));
 	--color-bg: light-dark(var(--color-light), var(--color-dark));
 	--color-bg-alt: light-dark(var(--color-light-alt), var(--color-dark-alt));
-	--color-accent: light-dark(var(--color-accent-dark), var(--color-accent-light));
+
+	--underline-thickness: .18em;
 }
 
 * {
@@ -27,7 +26,7 @@
 
 body {
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	background-color: var(--color-text);
 	font-family: var(--font-family-body);
 	width: 60vw;
 	max-width: 1200px;
@@ -46,19 +45,31 @@ body {
 	}
 }
 
+main {
+	background-color: var(--color-bg);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5;
 	color: var(--color-text-alt);
 	font-family: var(--font-family-header);
-	margin-top: .8em;
+	padding: 1.5rem 1rem 0 1rem;
 }
 
-h1 { font-size: 3rem; }
+h1 {
+	font-size: 3rem;
+	background-color: var(--color-bg-alt);
+}
 h2 { font-size: 2.5rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.65rem; }
 h5 { font-size: 1.4rem; }
 h6 { font-size: 1.25rem; }
+
+h2, h3, h4, h5, h6 {
+	background-color: var(--color-bg-alt);
+	margin-top: .8em;
+}
 
 img {
 	display: block;
@@ -68,29 +79,40 @@ img {
 	margin: 1rem 0;
 }
 
+main p,
+main ul, main ol {
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
 main p {
-	--line-height: 1.5;
-	--font-size: 1rem;
-	padding: 0 1rem;
+	padding: 1.5rem 1rem;
 }
 
 main ul, main ol {
-	padding: 0 1rem 0 3rem;
-	--line-height: 1.5;
-	--font-size: 1rem;
+	padding: 1.5rem 1rem 1.5rem 3rem;
 }
 
+/* Lines from https://codepen.io/pouretrebelle/pen/kxWemn */
 main p,
 main ul, main ol {
 	background-color: var(--color-bg-alt);
-	line-height: var(--line-height);
-	font-size: var(--font-size);
-	background-image: repeating-linear-gradient(transparent, transparent calc(var(--line-height) * var(--font-size) - 1px), hsl(from var(--color-accent) h s l / 50%) calc(var(--line-height) * var(--font-size) - 1px), hsl(from var(--color-accent) h s l / 50%) 100%);
+	background-image:
+		repeating-linear-gradient(
+			transparent,
+			transparent calc(1.5rem - 1px),
+			hsl(from var(--color-text) h s l / 50%) calc(1.5rem - 1px),
+			hsl(from var(--color-text) h s l / 50%) 100%);
 	background-clip: border-box;
-	background-position: 0 calc(0px - var(--line-height) * var(--font-size) / 6);
-	background-size: 1px calc(var(--line-height) * var(--font-size));
-	padding-top: calc(var(--line-height) * var(--font-size));
-	padding-bottom: calc(var(--line-height) * var(--font-size));
+	background-position: 0 calc(0px - 1.5rem / 6);
+	background-size: 1px 1.5rem;
+}
+
+main p,
+main ul, main ol,
+h2, h3, h4, h5, h6 {
+	box-shadow: 1px 0 hsl(from var(--color-text) h s l / 50%),
+		-1px 0 hsl(from var(--color-text) h s l / 50%);
 }
 
 p + p,
@@ -100,8 +122,19 @@ p + ul, p + ol {
 
 a {
 	color: var(--color-text);
-	text-decoration-color: var(--color-accent);
-	text-decoration-thickness: .1em;
+	text-underline-offset: var(--underline-thickness);
+	text-decoration-thickness: var(--underline-thickness);
+	transition: text-decoration-thickness .5s;
+}
+
+@media (any-hover: hover) {
+	a:hover {
+		text-decoration-thickness: calc(var(--underline-thickness) * 1.8);
+	}
+}
+
+a:active {
+	text-decoration-thickness: calc(var(--underline-thickness) * 1.8);
 }
 
 hr {

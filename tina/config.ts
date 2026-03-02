@@ -141,6 +141,35 @@ export default defineConfig({
 							{
 								name: "link",
 								label: "Link for nav item",
+								description: "Please include a trailing slash (e.g. '/about/' rather than '/about')",
+								required: true,
+								type: "string"
+							}
+						]
+					},
+					{
+						name: "bottomNav",
+						label: "Footer navigation",
+						type: "object",
+						list: true,
+						ui: {
+							itemProps: (item) => {
+								return {
+									label: item.title
+								};
+							},
+						},
+						fields: [
+							{
+								name: "title",
+								label: "Title for nav item",
+								required: true,
+								type: "string",
+							},
+							{
+								name: "link",
+								label: "Link for nav item",
+								description: "Please include a trailing slash (e.g. '/about/' rather than '/about')",
 								required: true,
 								type: "string"
 							}
@@ -207,8 +236,9 @@ export default defineConfig({
 					},
 					{
 						type: "string",
-						name: "author",
-						label: "Author",
+						name: "description",
+						label: "Description",
+						description: "this is used for SEO/link preview purposes only."
 					},
 					{
 						type: "object",

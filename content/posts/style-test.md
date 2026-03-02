@@ -1,9 +1,9 @@
 ---
 title: style test
-author: Lee Cattarin
+description: this has a description now!
 hero:
-  image: /public/hydroneer.png
-  alt: hydroneer screenshot
+  image: /public/DSCF4704.JPG
+  alt: sparrow on a branch
 tags:
   - highlight
   - test
@@ -29,17 +29,25 @@ Nullam in hendrerit magna. Suspendisse vestibulum massa risus, id vestibulum nis
 
 #### Heading 4
 
+that's a heading 4!
+
 ##### Heading 5
+
+and a heading 5…
 
 ###### Heading 6
 
+and finally a heading 6.
+
 ### Basic formatting
 
-[This is a link.](https://leecat.art) This is bold text. This is italic text. This is struck through. And this is monospace.
+[This is a link.](https://leecat.art) This is **bold text**. This is *italic text*. This is ~~struck through~~. And this is `monospace`.
 
 ### Image
 
 ![a sparrow on a branch](/public/DSCF4704.JPG)
+
+There's text after this image, just to test, because images are apparently wrapped in p tags.
 
 ### Blockquotes
 
