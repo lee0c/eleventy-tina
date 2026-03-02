@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+
+{% if hero and heroAlt %}
+  <img src="{{ hero }}" alt="{{ heroAlt }}">
+{% endif %}
+
+{{ content | safe }}

@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "title",
+    "description": "description",
+    "url": "https://example.com",
+    "author": "author"
+  },
+  "topNav": [
+    {
+      "title": "about",
+      "link": "/about"
+    },
+    {
+      "title": "contact",
+      "link": "/contact"
+    },
+    {
+      "title": "blog",
+      "link": "/blog"
+    }
+  ]
+}

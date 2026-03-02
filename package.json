@@ -1,0 +1,24 @@
+{
+  "name": "eleventy-tina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf _live && npx tinacms dev -c \"npx @11ty/eleventy --serve --quiet --output _live\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "tinacms": "^3.5.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@tinacms/cli": "^2.1.7",
+    "@types/node": "^25.3.3",
+    "lodash-es": "^4.17.23",
+    "luxon": "^3.7.2"
+  }
+}

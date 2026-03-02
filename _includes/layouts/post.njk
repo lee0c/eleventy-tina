@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+
+<p>
+  posted on
+  <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("America/Los_Angeles") }}</time>
+  by {{ author or metadata.author }}
+</p>
+
+{% if hero.image and hero.alt %}
+  <img src="{{ hero.image }}" alt="{{ hero.alt }}">
+{% endif %}
+
+{% set relevantTags = tags | removeBasicTags %}
+{% if relevantTags.length %}
+<ul>
+  {% for tag in relevantTags %}
+  <li>
+    {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <a href="{{ tagUrl }}">{{ tag }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{{ content | safe }}
