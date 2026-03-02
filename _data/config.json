@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "title",
-    "description": "description",
+    "title": "title testing",
+    "description": "description testing",
     "url": "https://example.com",
     "author": "author"
   },
@@ -24,6 +24,11 @@
       "title": "blog",
       "link": "/blog"
     }
+<<<<<<< HEAD
   ],
   "color": "#00FFFF"
 }
+=======
+  ]
+}
+>>>>>>> main

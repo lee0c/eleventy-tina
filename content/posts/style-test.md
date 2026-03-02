@@ -37,9 +37,9 @@ Nullam in hendrerit magna. Suspendisse vestibulum massa risus, id vestibulum nis
 
 [This is a link.](https://leecat.art) This is bold text. This is italic text. This is struck through. And this is monospace.
 
-### Images
+### Image
 
-Let's insert an image.![hydroneer screenshot](/public/hydroneer.png)
+![a sparrow on a branch](/public/DSCF4704.JPG)
 
 ### Blockquotes
 
