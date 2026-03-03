@@ -39,7 +39,7 @@ export default defineConfig({
 					global: true,
 					filename: {
 						readonly: true,
-						slugify: (values) => {
+						slugify: () => {
 							return "config";
 						}
 					}
@@ -120,6 +120,45 @@ export default defineConfig({
 								}
 							},
 						]
+					},
+				]
+			},
+			{
+				name: "home",
+				label: "Home page",
+				path: "content/home",
+				ui: {
+					filename: {
+						readonly: true,
+						slugify: () => {
+							return "home";
+						}
+					},
+					allowedActions: {
+						delete: false,
+						createNestedFolder: false,
+					}
+				},
+				defaultItem: () => {
+					return {
+						title: "Home",
+						layout: "home.njk",
+					}
+				},
+				fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true
+          },
+					{
+						type: "rich-text",
+						name: "body",
+						label: "body",
+						isBody: true,
+						required: true,
 					},
 				]
 			},
