@@ -3,8 +3,9 @@
   {% for post in postlist %}
   <li class="post">
     <a href="{{ post.url }}">
+      <p class="date">{{ post.date | readableDate }}</p>
       <h2>{{ post.data.title }}</h2>
-      {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+      {% if post.data.description %}<p class="description">{{ post.data.description }}</p>{% endif %}
       {% if post.data.hero.image and post.data.hero.alt %}
         <img src="{{ post.data.hero.image }}" alt="{{ post.data.hero.alt }}">
       {% endif %}

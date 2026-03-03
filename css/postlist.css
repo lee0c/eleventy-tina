@@ -19,20 +19,40 @@
 	background-size: 1px 1.5rem;
 	padding: 1rem;
 	margin: 1rem 0;
+	border-right: .5rem solid transparent;
+	border-left: .5rem solid transparent;
+}
+
+@media (any-hover: hover) {
+	.post:has(a:hover) {
+		border-right-color: var(--color-text);
+		border-left-color: var(--color-text);
+	}
+}
+
+.post:has(a:focus) {
+	border-radius: .025rem;
+	outline: solid var(--color-text);
+}
+
+.post a:focus {
+	outline: none;
 }
 
 .post a {
 	text-decoration: none;
 	display: grid;
 	grid-template-areas:
+		"date"
 		"h2"
-		"p";
+		"desc";
 }
 
 .post a:has(img) {
 	grid-template-areas:
+		"date img"
 		"h2 img"
-		"p img";
+		"desc img";
 	grid-template-columns: 2fr 1fr;
 	column-gap: 1rem;
 }
@@ -40,16 +60,23 @@
 .post h2 {
 	font-size: 2rem;
 	background-color: transparent;
-	padding: .5rem 0 calc(1.5rem - 4px);
+	padding: .25rem 0 calc(1.5rem - 4px);
 	margin: 0;
 	grid-area: h2;
 }
 
-.post p {
+.post .date {
+	grid-area: date;
+	padding: .25rem 0 0;
+	text-align: right;
+}
+
+.post .description {
 	padding: 0 1rem 0 2rem;
-	grid-area: p;
+	grid-area: desc;
 }
 
 .post img {
 	grid-area: img;
+	margin: 0;
 }
