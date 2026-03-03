@@ -2,10 +2,10 @@
 layout: base.njk
 ---
 
-{% if hero and heroAlt %}
-  <img src="{{ hero }}" alt="{{ heroAlt }}">
-{% endif %}
-
 <article>
+  {% if hero.image and hero.alt %}
+    <img src="{{ hero.image }}" alt="{{ hero.alt }}">
+  {% endif %}
+
   {{ content | safe }}
 </article>

@@ -2,10 +2,6 @@
 layout: page.njk
 ---
 
-{% if hero.image and hero.alt %}
-  <img src="{{ hero.image }}" alt="{{ hero.alt }}">
-{% endif %}
-
 <p class="post-date">
   posted on
   <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("America/Los_Angeles") }}</time>

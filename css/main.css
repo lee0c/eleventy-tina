@@ -4,7 +4,7 @@
 	--color-dark: #17201f;
 	--color-light: #69966e;
 
-	--color-dark-alt: #1d302e;
+	--color-dark-alt: #233d3a;
 	--color-light-alt: #a6c9a8;
 
 	--color-dark-text: #eadfc6;
@@ -47,6 +47,11 @@ body {
 
 main {
 	background-color: var(--color-bg);
+	padding-bottom: 2rem;
+}
+
+.content {
+	margin: 0 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,8 +63,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 3rem;
-	background-color: var(--color-bg-alt);
+	text-align: center;
 }
+
 h2 { font-size: 2.5rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.65rem; }
@@ -80,7 +86,8 @@ img {
 }
 
 main p,
-main ul, main ol {
+main ul, main ol,
+main table {
 	line-height: 1.5;
 	font-size: 1rem;
 }
@@ -95,7 +102,8 @@ main ul, main ol {
 
 /* Lines from https://codepen.io/pouretrebelle/pen/kxWemn */
 main p,
-main ul, main ol {
+main ul, main ol,
+table {
 	background-color: var(--color-bg-alt);
 	background-image:
 		repeating-linear-gradient(
@@ -108,16 +116,13 @@ main ul, main ol {
 	background-size: 1px 1.5rem;
 }
 
-main p,
-main ul, main ol,
-h2, h3, h4, h5, h6 {
-	box-shadow: 1px 0 hsl(from var(--color-text) h s l / 50%),
-		-1px 0 hsl(from var(--color-text) h s l / 50%);
-}
-
-p + p,
+p:not(:has(img)) + p,
 p + ul, p + ol {
 	padding-top: 0;
+}
+
+p:has(img) + p {
+	margin-top: 1rem;
 }
 
 a {
@@ -143,5 +148,19 @@ hr {
 }
 
 pre {
-	margin: 1rem;
+	padding: 1rem;
+	border: thick solid var(--color-bg-alt);
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+th {
+	background-color: var(--color-bg);
+}
+
+th, td {
+	padding: 0 .5rem;
 }

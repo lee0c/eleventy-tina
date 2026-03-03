@@ -4,7 +4,14 @@ import { chunk } from "lodash-es";
 import pluginFilters from "./_config/filters.js";
 
 export default async function(eleventyConfig) {
-		/* Collections */
+	/* Bundles */
+	/* CSS */
+	eleventyConfig.addBundle("css", {
+		toFileDirectory: "dist",
+		bundleHtmlContentFromSelector: "style",
+	});
+
+	/* Collections */
 	/* Tag pagination */
 	eleventyConfig.addCollection("tagPagination", function(collection) {
 		let tagSet = new Set(collection.getAllSorted().flatMap((post) => post.data.tags || []));

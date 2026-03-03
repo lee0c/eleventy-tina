@@ -24,8 +24,10 @@
           {{ metadata.fonts.bodyFallback }};
       }
     </style>
-    <link href="/css/main.css" rel="stylesheet" />
-    <link href="/css/nav.css" rel="stylesheet" />
+    <style>{% include "css/main.css" %}</style>
+    <style>{% include "css/nav.css" %}</style>
+
+    <style>{% getBundle "css" %}</style>
 
     <!-- Fonts -->
     {% if metadata.fonts.header or metadata.fonts.body %}
@@ -40,8 +42,10 @@
 		<main id="main">
       <h1>{{ title }}</h1>
 
-      {{ content | safe }}
-		</main>
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    </main>
     {% include "footer.njk" %}
 	</body>
 </html>

@@ -1,8 +1,3 @@
-header {
-	--tab-height: 2rem;
-	--curve-width: 1.2rem;
-}
-
 header ul,
 footer ul {
 	list-style: none;
@@ -10,53 +5,31 @@ footer ul {
 }
 
 header {
+	--tab-height: 2rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	margin: 1.5rem calc(var(--curve-width) + 3px) 0;
+	margin-top: 1.5rem;
 }
 
 header a {
-	background-color: var(--color-bg);
+	background-color: var(--color-bg-alt);
 	padding-left: 1rem;
 	padding-right: 1rem;
 	height: var(--tab-height);
 	display: block;
 	text-decoration: none;
 	font-family: var(--font-family-header);
-	position: relative;
-}
-
-header a::before,
-header a::after {
-	content: "";
-	width: var(--curve-width);
-	height: calc(var(--tab-height) + 1px);
-	background-color: var(--color-bg);
-	position: absolute;
-	bottom: -1px;
-}
-
-header a::before {
-	border-radius: .5rem 0 0 0;
-	left: calc(.66 * (0px - var(--curve-width)));
-	-webkit-transform: skewX(-10deg);
-	transform: skewX(-10deg);
-}
-
-header a::after {
-	border-radius: 0 .5rem 0 0;
-	right: calc(.66 * (0px - var(--curve-width)));
-	-webkit-transform: skewX(10deg);
-	transform: skewX(10deg);
+	border-radius: .5rem .5rem 0 0;
 }
 
 header a[aria-current="page"] {
-	background-color: var(--color-bg-alt);
+	background-color: var(--color-bg);
 }
 
 /* Skip link */
 #skip {
+	background-color: var(--color-bg);
 	left: -999px;
 	position: absolute;
 	top: auto;
@@ -67,22 +40,76 @@ header a[aria-current="page"] {
 }
 
 #skip:focus-visible {
-	display: inline-block;
 	left: auto;
-	top: auto;
 	width: auto;
-	height: auto;
-	overflow: auto;
+	height: var(--tab-height);
+	overflow: visible;
 	margin: 0 10%;
 	z-index: 999;
 }
 
 header ul {
-	gap: calc(var(--curve-width) * 2.5);
+	gap: 1rem;
+}
+
+@media (max-width: 450px) {
+	header {
+		display: grid;
+		grid-template-areas: "row1" "row2";
+		justify-content: stretch;
+	}
+
+	header a[href="/"] {
+		justify-self: start;
+		align-self: end;
+	}
+
+	header nav {
+		grid-area: row2;
+		align-self: end;
+	}
+
+	/* This selector means "the home page is the current page" */
+	header:has(a[aria-current="page"][href="/"]) nav {
+		grid-area: row1;
+		width: 100%;
+	}
+
+	header:has(a[aria-current="page"][href="/"]) > a {
+		grid-area: row2;
+	}
+
+	header:has(a[aria-current="page"][href="/"]) #skip {
+		position: relative;
+		grid-area: row2;
+		align-self: end;
+		justify-self: center;
+	}
+
+	header:has(nav) .folder-background {
+		grid-area: row2;
+		background-color: var(--color-bg-alt);
+		height: calc(var(--tab-height) * 1.25);
+		width: 100%;
+		z-index: -1;
+	}
+
+	header ul {
+		justify-content: space-between;
+		flex-flow: row wrap;
+	}
+
+	header:not(:has(a[aria-current="page"][href="/"])) nav a {
+		border-left: solid var(--color-bg);
+		border-top: solid var(--color-bg);
+		border-right: solid var(--color-bg);
+	}
 }
 
 footer {
 	padding: 1rem;
+	background-color: var(--color-bg);
+	border-radius: 0 0 .5rem .5rem;
 }
 
 footer ul {
@@ -94,5 +121,6 @@ footer ul {
 	footer ul {
 		flex-flow: column;
 		gap: 0;
+		text-align: center;
 	}
 }

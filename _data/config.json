@@ -13,16 +13,20 @@
   },
   "topNav": [
     {
+      "title": "home",
+      "link": "/"
+    },
+    {
       "title": "about",
       "link": "/about/"
     },
     {
       "title": "contact",
-      "link": "/contact"
+      "link": "/contact/"
     },
     {
       "title": "blog",
-      "link": "/blog"
+      "link": "/blog/"
     }
   ],
   "bottomNav": [
