@@ -45,7 +45,7 @@ body {
 
 @media (max-width: 650px) {
 	body {
-		width: 92vw;
+		width: 95vw;
 	}
 }
 
@@ -56,6 +56,12 @@ main {
 
 .content {
 	margin: 0 1rem;
+}
+
+@media (max-width: 650px) {
+	.content{
+		margin: 0 .5rem;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -142,17 +148,27 @@ hr {
 pre {
 	padding: 1rem;
 	border: thick solid var(--color-bg-alt);
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	overflow: auto;
 }
 
 table {
 	width: 100%;
 	border-spacing: 0;
+	border: thick solid var(--color-bg-alt);
 }
 
 th {
 	background-color: var(--color-bg);
+	vertical-align: bottom;
 }
 
 th, td {
 	padding: 0 .5rem;
+}
+
+td {
+	vertical-align: baseline;
 }

@@ -15,7 +15,7 @@ table {
 }
 
 p:not(:has(img)) + p,
-p + ul, p + ol {
+p:not(:has(img)) + ul, p:not(:has(img)) + ol {
 	padding-top: 0;
 }
 
