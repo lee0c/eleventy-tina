@@ -30,8 +30,33 @@ header a[aria-current="page"] {
 	background-color: var(--color-bg);
 }
 
+/* Hover and focus for header */
+@media (any-hover: hover) {
+	header a:hover {
+		border-color: var(--color-text-alt);
+	}
+
+	header a[aria-current="page"]:hover {
+		border-color: var(--color-text);
+	}
+}
+
+header a:focus-visible {
+	border-color: var(--color-text-alt);
+	outline: none;
+}
+
+header a[aria-current="page"]:focus-visible {
+	border-color: var(--color-text);
+}
+
+header a:active {
+	border-color: var(--color-bg);
+}
+
 /* Skip link */
 #skip {
+	background-color: var(--color-bg);
 	left: -999px;
 	position: absolute;
 	top: auto;
@@ -63,6 +88,7 @@ header ul {
 	}
 
 	header a[href="/"] {
+		grid-area: row1;
 		justify-self: start;
 		align-self: end;
 	}
@@ -82,11 +108,20 @@ header ul {
 		grid-area: row2;
 	}
 
-	header:has(a[aria-current="page"][href="/"]) #skip {
+	header #skip:focus-visible {
+		margin: 0;
 		position: relative;
+		justify-self: center;
+	}
+
+	header:not(:has(a[aria-current="page"][href="/"])) #skip:focus-visible {
+		grid-area: row1;
+		background-color: var(--color-bg-alt);
+	}
+
+	header:has(a[aria-current="page"][href="/"]) #skip:focus-visible {
 		grid-area: row2;
 		align-self: end;
-		justify-self: center;
 	}
 
 	header:has(nav) .folder-background {
@@ -95,17 +130,13 @@ header ul {
 		height: calc(var(--tab-height) * 1.25);
 		width: 100%;
 		z-index: -1;
+		border-left: solid var(--color-bg);
+		border-right: solid var(--color-bg);
 	}
 
 	header ul {
 		justify-content: space-between;
 		gap: 0;
-	}
-
-	header:not(:has(a[aria-current="page"][href="/"])) nav a {
-		border-left: solid var(--color-bg);
-		border-top: solid var(--color-bg);
-		border-right: solid var(--color-bg);
 	}
 }
 

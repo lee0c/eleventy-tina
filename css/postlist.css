@@ -30,12 +30,12 @@
 	}
 }
 
-.post:has(a:focus) {
+.post:has(a:focus-visible) {
 	border-radius: .025rem;
 	outline: solid var(--color-text);
 }
 
-.post a:focus {
+.post a:focus-visible {
 	outline: none;
 }
 
