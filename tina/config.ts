@@ -189,7 +189,6 @@ export default defineConfig({
 				defaultItem: () => {
 					return {
 						title: "Home",
-						layout: "home.njk",
 					}
 				},
 				fields: [

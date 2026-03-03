@@ -6,7 +6,7 @@ pagination:
   alias: tag
 eleventyComputed:
   permalink: /tags/{{ tag.tagName | slugify }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}
-  title: "tag: {{ tag.tagName }}"
+  title: "Tag: {{ tag.tagName }}"
 ---
 
 {% set postlist = tag.pageData %}
