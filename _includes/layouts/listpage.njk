@@ -4,3 +4,8 @@ layout: base.njk
 {% css %}{% include "css/postlist.css" %}{% endcss %}
 
 {{ content | safe }}
+
+{# idk why these are backwards either #}
+{% set newerHref = pagination.href.previous %}
+{% set olderHref = pagination.href.next %}
+{% include "pagination.njk" %}

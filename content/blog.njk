@@ -1,7 +1,7 @@
 ---
 pagination:
   data: collections.posts
-  size: 10
+  size: 4
   alias: postlist
   reverse: true
 title: blog
@@ -9,8 +9,3 @@ layout: listpage.njk
 ---
 
 {% include "postlist.njk" %}
-
-{# idk why these are backwards either #}
-{% set newerHref = pagination.href.previous %}
-{% set olderHref = pagination.href.next %}
-{% include "pagination.njk" %}
