@@ -21,7 +21,7 @@ export default async function(eleventyConfig) {
 		let tagSet = new Set(collection.getAllSorted().flatMap((post) => post.data.tags || []));
 		tagSet = tagSet.difference(new Set(["posts"]));
 
-		let paginationSize = 20;
+		let paginationSize = 10;
 		let tagMap = [];
 		let tagArray = [...tagSet];
 
