@@ -1,9 +1,13 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { chunk } from "lodash-es";
+import { attrs } from "@mdit/plugin-attrs";
 
 import pluginFilters from "./_config/filters.js";
 
 export default async function(eleventyConfig) {
+	/* Markdown HTML attribute parsing */
+	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(attrs));
+
 	/* Bundles */
 	/* CSS */
 	eleventyConfig.addBundle("css", {

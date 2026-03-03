@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tinacms dev -c \"npx @11ty/eleventy --serve --quiet\"",
-		"build": "tinacms build && npx @11ty/eleventy --quiet"
+    "build": "tinacms build && npx @11ty/eleventy --quiet"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^1.0.5",
+    "@mdit/plugin-attrs": "^0.25.1",
     "@tinacms/cli": "^2.1.7",
     "@types/node": "^25.3.3",
     "lodash-es": "^4.17.23",
