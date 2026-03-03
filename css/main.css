@@ -10,10 +10,14 @@
 	--color-dark-text: #eadfc6;
 	--color-light-text: #212226;
 
+	--color-dark-body: #1d2c2a;
+	--color-light-body: #93b896;
+
 	--color-text: light-dark(var(--color-light-text), var(--color-dark-text));
 	--color-text-alt: light-dark(var(--color-dark-alt), var(--color-light-alt));
 	--color-bg: light-dark(var(--color-light), var(--color-dark));
 	--color-bg-alt: light-dark(var(--color-light-alt), var(--color-dark-alt));
+	--color-bg-body: light-dark(var(--color-light-body), var(--color-dark-body));
 
 	--underline-thickness: .18em;
 }
@@ -26,7 +30,7 @@
 
 body {
 	color: var(--color-text);
-	background-color: var(--color-text);
+	background-color: var(--color-bg-body);
 	font-family: var(--font-family-body);
 	width: 60vw;
 	max-width: 1200px;
