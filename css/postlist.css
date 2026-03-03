@@ -71,7 +71,7 @@
 .post h2 {
 	font-size: 2rem;
 	background-color: transparent;
-	padding: .25rem 0 calc(1.5rem - 4px);
+	padding: calc(.25rem + 2px) 0 calc(1.5rem - 6px);
 	margin: 0;
 	grid-area: h2;
 }
