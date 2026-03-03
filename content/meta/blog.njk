@@ -4,8 +4,10 @@ pagination:
   size: 5
   alias: postlist
   reverse: true
-title: blog
+title: Blog
 layout: listpage.njk
+eleventyComputed:
+  permalink: /blog/{% if pagination.pageNumber %}{{ pagination.pageNumber }}/{% endif %}
 ---
 
 {% include "postlist.njk" %}

@@ -3,10 +3,11 @@ layout: listpage.njk
 title: home
 pagination:
   data: collections.highlight
-  size: 10
+  size: 2
   alias: postlist
   reverse: true
-permalink: index.html
+eleventyComputed:
+  permalink: /{% if pagination.pageNumber %}{{ pagination.pageNumber }}/{% endif %}
 ---
 
 <h2 class="subtitle">{{ subtitle }}</h2>
