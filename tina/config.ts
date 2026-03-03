@@ -154,6 +154,28 @@ export default defineConfig({
             required: true
           },
 					{
+						type: "string",
+						name: "subtitle",
+						label: "Subtitle",
+					},
+					{
+						type: "object",
+						name: "hero",
+						label: "Hero image",
+						fields: [
+							{
+								type: "image",
+								name: "image",
+								label: "Image",
+							},
+							{
+								type: "string",
+								name: "alt",
+								label: "Alt text",
+							},
+						]
+					},
+					{
 						type: "rich-text",
 						name: "body",
 						label: "body",

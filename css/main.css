@@ -172,3 +172,18 @@ th, td {
 td {
 	vertical-align: baseline;
 }
+
+.subtitle {
+	font-family: var(--font-family-body);
+	background-color: var(--color-bg);
+	font-size: 2rem;
+	margin-top: 0;
+	text-align: center;
+	padding: 2rem 3rem 1rem;
+}
+
+@media (max-width: 650px) {
+	.subtitle {
+		padding: 2rem 1rem 1rem;
+	}
+}

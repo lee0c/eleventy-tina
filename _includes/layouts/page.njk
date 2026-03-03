@@ -6,7 +6,7 @@ layout: base.njk
 
 <article>
   {% if hero.image and hero.alt %}
-    <img src="{{ hero.image }}" alt="{{ hero.alt }}">
+    <img class="hero" src="{{ hero.image }}" alt="{{ hero.alt }}">
   {% endif %}
 
   {{ content | safe }}

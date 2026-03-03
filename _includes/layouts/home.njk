@@ -8,6 +8,15 @@ pagination:
   reverse: true
 permalink: index.html
 ---
+
+<h2 class="subtitle">{{ subtitle }}</h2>
+
+{% if hero.image and hero.alt %}
+  <img class="hero" src="{{ hero.image }}" alt="{{ hero.alt }}">
+{% endif %}
+
 {{ content | safe }}
+
+<h2>Highlights</h2>
 
 {% include "postlist.njk" %}
