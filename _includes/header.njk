@@ -5,7 +5,7 @@
   <a class="site-title" href="/"
     {% if page.url == "/" %}aria-current="page"{% endif %}
     {% if "/" == page.url | stripPageNumber %}data-current-section="true"{% endif %}>
-    home</a>
+    Home</a>
 
   <div class="folder-background"></div>
 
@@ -13,14 +13,14 @@
     <ul>
       <li><a href="/about/"
         {% if "/about/" == page.url %}aria-current="page" data-current-section="true"{% endif %}>
-        about</a></li>
+        About</a></li>
       <li><a href="/blog/"
         {% if "/blog/" == page.url %}aria-current="page"{% endif %}
         {% if "/blog/" == page.url | stripPageNumber %}data-current-section="true"{% endif %}>
-        blog</a></li>
+        Blog</a></li>
       <li><a href="/contact/"
         {% if "/contact/" == page.url %}aria-current="page" data-current-section="true"{% endif %}>
-        contact</a></li>
+        Contact</a></li>
     </ul>
   </nav>
 
