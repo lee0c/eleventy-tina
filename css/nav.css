@@ -1,6 +1,5 @@
 header ul,
-footer ul,
-.pagination {
+footer ul {
 	list-style: none;
 	display: flex;
 }
@@ -165,16 +164,57 @@ footer ul {
 }
 
 .pagination {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: "older newer";
+	column-gap: 1rem;
 	font-family: var(--font-family-header);
 	margin: 2rem 0 0;
 	padding: 0;
 	justify-content: space-between;
+	background-image: none;
+	background-color: transparent;
+	text-align: center;
+}
+
+.post-pagination .older {
+	text-align: left;
+}
+
+.post-pagination .newer {
+	text-align: right;
+}
+
+.older {
+	grid-area: older;
 }
 
 .older::before {
 	content: "←" / "";
 }
 
+.newer {
+	grid-area: newer;
+}
+
 .newer::after {
 	content: "→" / "";
+}
+
+@media (max-width: 650px) {
+	.post-pagination {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"older"
+			"newer";
+		row-gap: 1rem;
+	}
+	.older {
+		text-align: left;
+	}
+
+	.newer {
+		text-align: right;
+	}
 }

@@ -32,3 +32,13 @@ layout: base.njk
 
   {{ content | safe }}
 </article>
+
+{% set olderPost = collections.posts | getPreviousCollectionItem %}
+{% set newerPost = collections.posts | getNextCollectionItem %}
+{% set olderHref = olderPost.url %}
+{% set newerHref = newerPost.url %}
+{% set olderTitle = olderPost.data.title %}
+{% set newerTitle = newerPost.data.title %}
+{% set inPost = true %}
+{% include "pagination.njk" %}
+
