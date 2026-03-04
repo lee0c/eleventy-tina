@@ -6,20 +6,25 @@
     "author": "author"
   },
   "fonts": {
-    "header": "Rock Salt",
-    "headerFallback": "serif",
-    "body": "Roboto Condensed",
-    "bodyFallback": "sans-serif"
+    "header": "Fredericka the Great",
+    "headerFallback": "sans-serif",
+    "body": "Noto Serif",
+    "bodyFallback": "serif",
+    "nav": "Roboto",
+    "navFallback": "sans-serif",
+    "navPadding": 0.4
   },
   "colors": {
-    "darkText": "#212226",
-    "lightText": "#EADFC6",
-    "dark1": "#17201F",
-    "light1": "#69966E",
-    "dark2": "#1D2C2A",
-    "light2": "#93B896",
-    "dark3": "#233D3A",
-    "light3": "#A6C9A8"
+    "dark2": "#190B23",
+    "dark1": "#090B1E",
+    "dark3": "#2E0D2B",
+    "darkTextBody": "#BECFFF",
+    "darkTextHeader": "#A8BEFF",
+    "light2": "#FEE1BD",
+    "light1": "#B7D0EA",
+    "light3": "#FFF1C2",
+    "lightTextBody": "#152333",
+    "lightTextHeader": "#183350"
   },
   "contacts": [
     {

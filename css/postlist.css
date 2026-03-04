@@ -12,8 +12,8 @@
 		repeating-linear-gradient(
 			transparent,
 			transparent calc(1.5rem - 1px),
-			hsl(from var(--color-text) h s l / 30%) calc(1.5rem - 1px),
-			hsl(from var(--color-text) h s l / 30%) 100%);
+			hsl(from var(--color-text-body) h s l / 30%) calc(1.5rem - 1px),
+			hsl(from var(--color-text-body) h s l / 30%) 100%);
 	background-clip: border-box;
 	background-position: 0 calc(-4px - 1.5rem / 6);
 	background-size: 1px 1.5rem;
@@ -25,14 +25,14 @@
 
 @media (any-hover: hover) {
 	.post:has(a:hover) {
-		border-right-color: var(--color-text);
-		border-left-color: var(--color-text);
+		border-right-color: var(--color-text-body);
+		border-left-color: var(--color-text-body);
 	}
 }
 
 .post:has(a:focus-visible) {
 	border-radius: .025rem;
-	outline: solid var(--color-text);
+	outline: solid var(--color-text-body);
 }
 
 .post a:focus-visible {

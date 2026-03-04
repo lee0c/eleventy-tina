@@ -1,3 +1,9 @@
+header,
+footer,
+.pagination {
+	font-family: var(--font-family-nav);
+}
+
 header ul,
 footer ul {
 	list-style: none;
@@ -16,14 +22,15 @@ header a {
 	background-color: var(--color-bg-alt);
 	padding-left: 1rem;
 	padding-right: 1rem;
+	padding-top: var(--nav-padding);
 	height: var(--tab-height);
 	display: block;
 	text-decoration: none;
-	font-family: var(--font-family-header);
 	border-radius: .5rem .5rem 0 0;
 	border-left: solid var(--color-bg);
 	border-top: solid var(--color-bg);
 	border-right: solid var(--color-bg);
+	letter-spacing: .1rem;
 }
 
 header a[data-current-section="true"] {
@@ -33,21 +40,21 @@ header a[data-current-section="true"] {
 /* Hover and focus for header */
 @media (any-hover: hover) {
 	header a:hover {
-		border-color: var(--color-text-alt);
+		border-color: var(--color-text-header);
 	}
 
 	header a[data-current-section="true"]:hover {
-		border-color: var(--color-text);
+		border-color: var(--color-text-body);
 	}
 }
 
 header a:focus-visible {
-	border-color: var(--color-text-alt);
+	border-color: var(--color-text-header);
 	outline: none;
 }
 
 header a[data-current-section="true"]:focus-visible {
-	border-color: var(--color-text);
+	border-color: var(--color-text-body);
 }
 
 header a:active {
@@ -163,26 +170,21 @@ footer ul {
 	}
 }
 
+/* Pagination */
 .pagination {
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas: "older newer";
 	column-gap: 1rem;
-	font-family: var(--font-family-header);
 	margin: 2rem 0 0;
 	padding: 0;
 	justify-content: space-between;
 	background-image: none;
 	background-color: transparent;
-	text-align: center;
 }
 
-.post-pagination .older {
-	text-align: left;
-}
-
-.post-pagination .newer {
+.newer {
 	text-align: right;
 }
 

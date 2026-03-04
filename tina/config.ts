@@ -125,8 +125,32 @@ export default defineConfig({
 								],
 								ui: {
 									component: "radio-group"
-								}
+								},
 							},
+							{
+								name: "nav",
+								label: "Nav font",
+								type: "string",
+							},
+							{
+								name: "navFallback",
+								label: "Nav fallback font",
+								type: "string",
+								required: true,
+								options: [
+									{ label: "serif", value: "serif" },
+									{ label: "sans serif", value: "sans-serif" }
+								],
+								ui: {
+									component: "radio-group"
+								},
+							},
+							{
+								name: "navPadding",
+								label: "Nav item top padding",
+								description: "You may need to tweak this value depending on your font. Value in rem. Recommended range 0-0.5",
+								type: "number",
+							}
 						]
 					},
 					{
@@ -142,7 +166,7 @@ export default defineConfig({
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#1d2c2a"],
+									colors: ["#1d2c2a", "#190b23"],
 									widget: "sketch",
 								}
 							},
@@ -153,29 +177,40 @@ export default defineConfig({
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#17201f"],
+									colors: ["#17201f", "#090b1e"],
 									widget: "sketch",
 								}
 							},
 							{
 								name: "dark3",
-								label: "Dark mode text blocks / light mode text (header)",
+								label: "Dark mode text blocks",
 								type: "string",
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#233d3a"],
+									colors: ["#233d3a", "#2e0d2b"],
 									widget: "sketch",
 								}
 							},
 							{
-								name: "lightText",
+								name: "darkTextBody",
 								label: "Dark mode text (body)",
 								type: "string",
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#eadfc6"],
+									colors: ["#eadfc6", "#becfff"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "darkTextHeader",
+								label: "Dark mode text (headers)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#eadfc6", "#a8beff"],
 									widget: "sketch",
 								}
 							},
@@ -186,7 +221,7 @@ export default defineConfig({
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#93b896"],
+									colors: ["#93b896", "#fee1bd"],
 									widget: "sketch",
 								}
 							},
@@ -197,29 +232,40 @@ export default defineConfig({
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#69966e"],
+									colors: ["#69966e", "#b7d0ea"],
 									widget: "sketch",
 								}
 							},
 							{
 								name: "light3",
-								label: "Light mode text blocks / dark mode text (header)",
+								label: "Light mode text blocks",
 								type: "string",
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#a6c9a8"],
+									colors: ["#a6c9a8", "#fff1c2"],
 									widget: "sketch",
 								}
 							},
 							{
-								name: "darkText",
+								name: "lightTextBody",
 								label: "Light mode text (body)",
 								type: "string",
 								required: true,
 								ui: {
 									component: "color",
-									colors: ["#212226"],
+									colors: ["#212226", "#152333"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "lightTextHeader",
+								label: "Light mode text (headers)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#212226", "#183350"],
 									widget: "sketch",
 								}
 							},

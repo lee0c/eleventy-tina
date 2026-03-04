@@ -1,8 +1,8 @@
 :root {
 	color-scheme: light dark;
 
-	--color-text: light-dark(var(--color-dark-text), var(--color-light-text));
-	--color-text-alt: light-dark(var(--color-dark3), var(--color-light3));
+	--color-text-body: light-dark(var(--color-light-text-body), var(--color-dark-text-body));
+	--color-text-header: light-dark(var(--color-light-text-header), var(--color-dark-text-header));
 	--color-bg: light-dark(var(--color-light1), var(--color-dark1));
 	--color-bg-alt: light-dark(var(--color-light3), var(--color-dark3));
 	--color-bg-body: light-dark(var(--color-light2), var(--color-dark2));
@@ -17,7 +17,7 @@
 }
 
 body {
-	color: var(--color-text);
+	color: var(--color-text-body);
 	background-color: var(--color-bg-body);
 	font-family: var(--font-family-body);
 	width: 60vw;
@@ -54,7 +54,7 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5;
-	color: var(--color-text-alt);
+	color: var(--color-text-header);
 	font-family: var(--font-family-header);
 	padding: 1.5rem 1rem 0 1rem;
 }
@@ -100,7 +100,7 @@ main ul, main ol {
 }
 
 a {
-	color: var(--color-text);
+	color: var(--color-text-body);
 }
 
 main a,
@@ -120,7 +120,7 @@ footer a {
 main a:focus-visible,
 footer a:focus-visible {
 	text-decoration: none;
-	outline: .1rem solid var(--color-text);
+	outline: .1rem solid var(--color-text-body);
 	border-radius: .05rem;
 }
 

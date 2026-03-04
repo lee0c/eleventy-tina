@@ -23,6 +23,8 @@ export default function(eleventyConfig) {
 		let out = "https://fonts.googleapis.com/css2?";
 		if (fonts.header)
 			out += `family=${fonts.header.replace(" ", "+")}&`;
+		if (fonts.nav)
+			out += `family=${fonts.body.replace(" ", "+")}&`;
 		if (fonts.body)
 			out += `family=${fonts.body.replace(" ", "+")}:ital,wght@0,300..700;1,300..700&`;
 		out += "display=swap";
