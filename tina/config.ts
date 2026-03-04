@@ -50,6 +50,11 @@ export default defineConfig({
 						slugify: () => {
 							return "config";
 						}
+					},
+					allowedActions: {
+						create: false,
+						delete: false,
+						createNestedFolder: false,
 					}
 				},
 				fields: [
@@ -354,6 +359,7 @@ export default defineConfig({
 						}
 					},
 					allowedActions: {
+						create: false,
 						delete: false,
 						createNestedFolder: false,
 					}
