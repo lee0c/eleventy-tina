@@ -22,3 +22,18 @@ p:not(:has(img)) + ul, p:not(:has(img)) + ol {
 p:has(img) + p {
 	margin-top: 1rem;
 }
+
+p img {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p.small {
+	padding-top: .25rem;
+}
+
+blockquote p {
+	background-color: transparent;
+	background-image: none;
+	border: thick solid var(--color-bg-blocks);
+}

@@ -84,6 +84,10 @@ img {
 	margin: 1rem auto;
 }
 
+p img {
+	max-width: 60%;
+}
+
 main p,
 main ul, main ol,
 main table {
@@ -160,4 +164,20 @@ th, td {
 
 td {
 	vertical-align: baseline;
+}
+
+blockquote p {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+.subtitle {
+	text-align: center;
+	padding-top: 0;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.small {
+	font-size: .8em;
 }
