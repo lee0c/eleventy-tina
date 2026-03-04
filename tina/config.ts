@@ -130,6 +130,102 @@ export default defineConfig({
 						]
 					},
 					{
+						name: "colors",
+						label: "Site color scheme",
+						type: "object",
+						required: true,
+						fields: [
+							{
+								name: "dark2",
+								label: "Dark mode background",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#1d2c2a"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "dark1",
+								label: "Dark mode folder",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#17201f"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "dark3",
+								label: "Dark mode text blocks / light mode text (header)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#233d3a"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "lightText",
+								label: "Dark mode text (body)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#eadfc6"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "light2",
+								label: "Light mode background",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#93b896"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "light1",
+								label: "Light mode folder",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#69966e"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "light3",
+								label: "Light mode text blocks / dark mode text (header)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#a6c9a8"],
+									widget: "sketch",
+								}
+							},
+							{
+								name: "darkText",
+								label: "Light mode text (body)",
+								type: "string",
+								required: true,
+								ui: {
+									component: "color",
+									colors: ["#212226"],
+									widget: "sketch",
+								}
+							},
+						]
+					},
+					{
 						name: "contacts",
 						label: "Contact information",
 						type: "object",

@@ -11,6 +11,16 @@
     "body": "Roboto Condensed",
     "bodyFallback": "sans-serif"
   },
+  "colors": {
+    "darkText": "#212226",
+    "lightText": "#EADFC6",
+    "dark1": "#17201F",
+    "light1": "#69966E",
+    "dark2": "#1D2C2A",
+    "light2": "#93B896",
+    "dark3": "#233D3A",
+    "light3": "#A6C9A8"
+  },
   "contacts": [
     {
       "title": "email me",
