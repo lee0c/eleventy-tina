@@ -4,8 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		{% set pageTitle %}{{ title }} | {{ metadata.title }}{% endset %}
-		<title>{{ pageTitle }}</title>
+    {% if title == metadata.title %}
+      {% set pageTitle = title %}
+    {% else %}
+      {% set pageTitle %}{{ title }} | {{ metadata.title }}{% endset %}
+    {% endif %}
+    <title>{{ pageTitle }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
     <meta property="og:title" content="{{ title or metadata.title }}" />
