@@ -6,7 +6,7 @@
       <h2>{{ post.data.title }}</h2>
       <p class="date">{{ post.date | readableDate }}</p>
       {% if post.data.description %}<p class="description">{{ post.data.description }}</p>{% endif %}
-      {% if post.data.hero.image and post.data.hero.alt %}
+      {% if post.data.hero.image %}
         <img src="{{ post.data.hero.image }}" alt="{{ post.data.hero.alt }}">
       {% endif %}
     </a>

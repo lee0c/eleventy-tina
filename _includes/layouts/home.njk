@@ -8,18 +8,17 @@ pagination:
 eleventyComputed:
   permalink: /{% if pagination.pageNumber %}{{ pagination.pageNumber }}/{% endif %}
 ---
-{% css %}{% include "css/home.css" %}{% endcss %}
 
 {% if pagination.pageNumber == 0 %}
   <h2 class="subtitle">{{ subtitle }}</h2>
 
-  {% if hero.image and hero.alt %}
+  {% if hero.image %}
     <img class="home hero" src="{{ hero.image }}" alt="{{ hero.alt }}">
   {% endif %}
 
   {{ content | safe }}
 
-  <h2 class="highlights-header">Highlights</h2>
+  <h2 class="center-h2">Highlights</h2>
 {% endif %}
 
 {% include "postlist.njk" %}

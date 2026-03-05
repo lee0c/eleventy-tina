@@ -2,11 +2,10 @@
 layout: base.njk
 ---
 {% css %}{% include "css/post.css" %}{% endcss %}
-
-{# this isn't part of the base template because it fights with the postlist css #}
-{% css %}{% include "css/lines.css" %}{% endcss %}
+{% css %}{% include "css/postlist.css" %}{% endcss %}
 
 <article>
+  <h2 class="subtitle">{{ description }}</h2>
   <div class="metadata">
     <p class="post-date">
       posted on
@@ -27,7 +26,7 @@ layout: base.njk
     {% endif %}
   </div>
 
-  {% if hero.image and hero.alt %}
+  {% if hero.image %}
     <img class="hero" src="{{ hero.image }}" alt="{{ hero.alt }}">
   {% else %}
     <hr>
@@ -51,7 +50,7 @@ layout: base.njk
 {% set postlist = collections.posts | filterByTags(relevantTags) | excludeFromCollection([page.url, olderHref, newerHref]) | randomize | head(3) %}
 {% if postlist.length %}
 <section class="related-posts">
-  <h2>related posts</h2>
+  <h2 class="center-h2">Related Posts</h2>
   {% include "postlist.njk" %}
 </section>
 {% endif %}

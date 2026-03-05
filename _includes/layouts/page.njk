@@ -3,11 +3,8 @@ layout: base.njk
 ---
 {% css %}{% include "css/page.css" %}{% endcss %}
 
-{# this isn't part of the base template because it fights with the postlist css #}
-{% css %}{% include "css/lines.css" %}{% endcss %}
-
 <article>
-  {% if hero.image and hero.alt %}
+  {% if hero.image %}
     <img class="hero" src="{{ hero.image }}" alt="{{ hero.alt }}">
   {% endif %}
 

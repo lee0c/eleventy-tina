@@ -170,13 +170,33 @@ blockquote p {
 	padding-right: 4rem;
 }
 
-.subtitle {
+.center-h2 {
+	background-color: transparent;
 	text-align: center;
-	padding-top: 0;
+}
+
+.subtitle {
+	font-family: var(--font-family-body);
+	text-align: center;
+	padding: 1rem 3rem 1rem;
 	font-style: italic;
-	font-size: 1.2em;
+	font-size: 1.65rem;
+	background-color: transparent;
+	background-image: none;
+	margin-top: 0;
+}
+
+@media (max-width: 650px) {
+	.subtitle {
+		padding: 2rem 1rem 1rem;
+	}
 }
 
 .small {
 	font-size: .8em;
+}
+
+.home.hero {
+	max-width: 600px;
+	width: 100%;
 }

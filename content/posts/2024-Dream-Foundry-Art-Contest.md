@@ -1,6 +1,8 @@
 ---
 title: 2024 Dream Foundry Art Contest
 date: 2024-06-06T20:47:56.344Z
+tags:
+  - art
 ---
 
 Art news? On a writing blog? Its more likely than you think.

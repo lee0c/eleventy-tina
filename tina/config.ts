@@ -503,7 +503,6 @@ export default defineConfig({
             name: "body",
             label: "Body",
             isBody: true,
-						required: true
 					}
 				],
 			}
