@@ -1,14 +1,52 @@
 import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
+	/* Exclude all posts with given URLs from a collection list */
+	eleventyConfig.addFilter("excludeFromCollection", function (collection=[], urls=[this.ctx.page.url]) {
+		return collection.filter(post => urls.indexOf(post.url) === -1);
+	});
+
+	/* Filter a collection by a set of tags, returning any that share one or more tags */
+	eleventyConfig.addFilter("filterByTags", function(collection=[], ...requiredTags) {
+		  return collection.filter(post => {
+			return requiredTags.flat().some(tag => post.data.tags.includes(tag));
+		});
+	});
+
 	// Return the keys used in an object
 	eleventyConfig.addFilter("getKeys", target => {
 		return Object.keys(target);
 	});
 
+	/* Return n elements from a list */
+	eleventyConfig.addFilter("head", (collection=[], n) => {
+		if(!Array.isArray(collection) || collection.length === 0) {
+			return [];
+		}
+		if( n < 0 ) {
+			return collection.slice(n);
+		}
+
+		return collection.slice(0, n);
+	});
+
 	/* For <time> elements */
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+	});
+
+	/* What it says on the tin */
+	eleventyConfig.addFilter("randomize", function(array) {
+		// Create a copy of the array to avoid modifying the original
+		let shuffledArray = array.slice();
+
+		// Fisher-Yates shuffle algorithm
+		for (let i = shuffledArray.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+		}
+
+		return shuffledArray;
 	});
 
 	/* Human-readable dates */

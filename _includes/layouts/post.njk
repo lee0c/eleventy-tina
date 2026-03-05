@@ -45,3 +45,13 @@ layout: base.njk
 {% set inPost = true %}
 {% include "pagination.njk" %}
 
+<hr>
+
+{% set relevantTags = tags | removeBasicTags %}
+{% set postlist = collections.posts | filterByTags(relevantTags) | excludeFromCollection([page.url, olderHref, newerHref]) | randomize | head(3) %}
+{% if postlist.length %}
+<section class="related-posts">
+  <h2>related posts</h2>
+  {% include "postlist.njk" %}
+</section>
+{% endif %}
