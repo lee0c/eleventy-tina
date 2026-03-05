@@ -2,7 +2,7 @@
 title: August 2024 Refresh
 date: 2024-08-24T20:50:22.975Z
 tags:
-  - Website news
+  - website news
 ---
 
 I really don't have a catchy opening here. All I can think of is: Yes, yes I did completely redesign the visuals of my website. And yes, yes I am more happy with it.

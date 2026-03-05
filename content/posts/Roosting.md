@@ -2,8 +2,8 @@
 title: Roosting
 date: 2024-02-20T21:46:05.134Z
 tags:
-  - Website news
-  - Introduction
+  - website news
+  - introduction
 ---
 
 Hello all, and welcome to Gryphon's Roost. As you might have been able to tell, if you watch this space, things are still a work in progress! Website development is not my forte, although I know some basics from school. So, please bear with me as I get my feet under me here.
