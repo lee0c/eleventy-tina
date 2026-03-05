@@ -1,0 +1,61 @@
+.palettes {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+@media (max-width: 850px) {
+	.palettes{
+		grid-template-columns: 1fr;
+	}
+}
+
+.background {
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.palettes h2,
+.palettes h3 {
+	margin: .5rem 0 0;
+	padding: 0;
+	text-align: center;
+	line-height: 1.25;
+}
+
+.palettes h2 {
+	font-size: 2rem;
+}
+
+.folder {
+	width: 75%;
+	height: 86%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.palettes h3 {
+	font-size: 1.6rem;
+}
+
+.block {
+	width: 90%;
+	height: 50%;
+	overflow: auto;
+}
+
+.palettes p {
+	padding: .25rem;
+	text-align: center;
+	font-size: .8rem;
+}
+
+p.footer {
+	font-size: .7rem;
+}

@@ -1,0 +1,49 @@
+---
+title: Palettes
+layout: base.njk
+permalink: palettes/
+---
+
+{% css %}{% include "css/palette.css" %}{% endcss %}
+
+<div class="palettes">
+  {% set scheme = "drab" %}
+  {% set mode = "light" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "drab" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "sunset" %}
+  {% set mode = "light" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "sunset" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "beach" %}
+  {% set mode = "light" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "beach" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "og" %}
+  {% set mode = "light" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "og" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "bisexual" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+
+  {% set scheme = "mustard" %}
+  {% set mode = "dark" %}
+  {% include "palette.njk" %}
+</div>

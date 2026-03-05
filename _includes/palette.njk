@@ -1,0 +1,14 @@
+{% set palette %}{{ scheme }}-{{ mode }}{% endset %}
+
+
+
+<div class="background" style="background-color: var(--color-{{ palette }}-bg)">
+  <div class="folder" style="background-color: var(--color-{{ palette }}-bg-folder);">
+    <h2 style="color: var(--color-{{ palette }}-text-header)">{{ scheme }} {{ mode }}</h2>
+    <div class="block" style="background-color: var(--color-{{ palette }}-bg-blocks);">
+      <h3 style="color: var(--color-{{ palette }}-text-header)">hello,</h3>
+      <p style="color: var(--color-{{ palette }}-text-body)">world!</p>
+    </div>
+    <p class="footer" style="color: var(--color-{{ palette }}-text-body)">bye :)</p>
+  </div>
+</div>
