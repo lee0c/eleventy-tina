@@ -38,6 +38,7 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/r/content-modelling-collections/
   schema: {
     collections: [
+			/* Site config */
 			{
 				name: "config",
 				label: "Site config",
@@ -175,7 +176,6 @@ export default defineConfig({
 								options: [
 									{ label: "Olive drab", value: "drab" },
 									{ label: "Sunset", value: "sunset" },
-									{ label: "Beach", value: "beach" },
 									{ label: "Bisexual", value: "bisexual" },
 									{ label: "Mustard", value: "mustard" },
 									{ label: "OG (original green)", value: "green" },
@@ -347,6 +347,7 @@ export default defineConfig({
 					},
 				]
 			},
+			/* Home page */
 			{
 				name: "home",
 				label: "Home page",
@@ -408,6 +409,7 @@ export default defineConfig({
 					},
 				]
 			},
+			/* Other pages */
       {
         name: "page",
         label: "Pages",
@@ -445,6 +447,7 @@ export default defineConfig({
           },
         ]
       },
+			/* Posts */
       {
         name: "post",
         label: "Posts",

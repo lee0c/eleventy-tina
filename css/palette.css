@@ -20,6 +20,13 @@
 }
 
 .palettes h2,
+.palettes h3,
+.palettes p {
+	background-image: none;
+	background-color: transparent;
+}
+
+.palettes h2,
 .palettes h3 {
 	margin: .5rem 0 0;
 	padding: 0;
